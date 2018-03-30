@@ -4,7 +4,7 @@
 # Author: Serge Mata copyrate a tout le monde SMOM Tools
 #-------------------------------------------------------------------------------
 # This script will install on your SMI 1.0.6 Debian Stretch server.
-# Debian de base installée DE BASE J'insiste.. Debian minimal.
+# Debian de base installÃ©e DE BASE J'insiste.. Debian minimal.
 #-------------------------------------------------------------------------------
 #  Basculer en root en utilisant la commande su 
 #  On dois se retrouver en root 
@@ -13,7 +13,7 @@
 #       Placez ce contenu dedans 
 #       Execute the script to install SMI 1.0.6:
 #  sh setup.sh
-#  Sélectionner la version MySQL désirée. Jessie 5.6
+#  SÃ©lectionner la version MySQL dÃ©sirÃ©e. Jessie 5.6
 ################################################################################
 
 #Post install
@@ -28,14 +28,14 @@ apt-get install libxml2-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libxpm-d
 echo "Installation apache2 "
 apt-get install apache2 apache2-dev -y
 echo "Recuperation du Mysql community "
-echo "Sélectionner la version MySQL Jessie 5.6 "
+echo "SÃ©lectionner la version MySQL Jessie 5.6 "
 wget http://dev.mysql.com/get/mysql-apt-config_0.8.0-1_all.deb
 dpkg -i mysql-apt-config_0.8.0-1_all.deb
-# L’utilitaire de configuration des dépôts s’affiche.
-# Sélectionner la version MySQL désirée. Jessie 5.6
-# Sélectionner « Ok »
-# Un fichier /etc/apt/sources.list.d/mysql.list est généré.
-# Reste à faire une mise à jour d’apt-get :
+# Lâ€™utilitaire de configuration des dÃ©pÃ´ts sâ€™affiche.
+# SÃ©lectionner la version MySQL dÃ©sirÃ©e. Jessie 5.6
+# SÃ©lectionner Â« Ok Â»
+# Un fichier /etc/apt/sources.list.d/mysql.list est gÃ©nÃ©rÃ©.
+# Reste Ã  faire une mise Ã  jour dâ€™apt-get :
 apt-get update
 apt-get install mysql-community-server
 #-------------------------------------------------------------------------------
@@ -84,9 +84,9 @@ mysql -u root -p smi < /var/www/html/smi/install/sql/smi_1.0.5_to_1.0.6.sql;
 # mysql -u root -p smi < /var/www/html/smi/install/sql/smi_1.0.6.sql;
 mv /var/www/html/smi/install /var/www/html/smi/install.bak
 #-------------------------------------------------------------------------------
-echo "Compléter les lignes prm.inc.php  "
+echo "ComplÃ©ter les lignes prm.inc.php  "
 # ci dessou une version de feignasse prete a l'emploi pour test
-# il suffit de décommenter les 2 ligne suivante
+# il suffit de dÃ©commenter les 2 ligne suivante
 # wget http://91.121.52.109/svg/prm.inc.php.zip
 # cp prm.inc.php.zip /var/www/html/smi/inc/prm.inc.php
 
