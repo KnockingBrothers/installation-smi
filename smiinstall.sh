@@ -9,10 +9,10 @@
 #  Basculer en root en utilisant la commande su 
 #  On dois se retrouver en root 
 #  Creer un nouveau fichier 
-#  nano setup.sh
+#  nano setup.sh ou smiinstall.sh
 #       Placez ce contenu dedans 
 #       Execute the script to install SMI 1.0.6:
-#  sh setup.sh
+#  sh setup.sh ou sh smiinstall.sh
 #  Sélectionner la version MySQL désirée. Jessie 5.6
 ################################################################################
 
