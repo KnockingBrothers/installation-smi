@@ -6,7 +6,7 @@
 # Debian de base installée DE BASE J'insiste.. Debian minimal.
 #-------------------------------------------------------------------------------
 #  Basculer en root en utilisant la commande su 
-#  On dois se retrouver en root 
+#  On doit se retrouver en root 
 #  Creer un nouveau fichier 
 #  nano setup.sh ou smiinstall.sh
 #       Placez ce contenu dedans 
