@@ -1,3 +1,4 @@
+
 #!/bin/bash
 ################################################################################
 # Script for installing SMI 1.0.6 on Debian9 Attention not tested in ubuntu
@@ -100,5 +101,3 @@ echo "This the End "
 echo "That's all folks"
 echo  "Test du php5-apache-Mysql "
 php --version && apache2 -v && mysql -V && uname -a
- 
-wget https://raw.githubusercontent.com/KnockingBrothers/installation-smi/1.0.6/smiinstall.sh
