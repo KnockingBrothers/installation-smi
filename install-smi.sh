@@ -54,6 +54,9 @@ echo "Installation du php 5 "
 apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli
 apt-get install libapache2-mod-php5 php5-common php5-idn php-pear php5-imagick php5-imap php5-json php5-mcrypt php5-memcache php5-mhash php5-mysql php5-pspell php5-recode php5-sqlite php5-tidy php5-xmlrpc php5-xsl
 #-------------------------------------------------------------------------------
+echo "installation de phpmyadmin"
+apt-get install phpmyadmin -y
+#-------------------------------------------------------------------------------
 echo "Retour au sources stretch "
 mv /etc/apt/sources.list /etc/apt/sources.list.jessie
 mv /etc/apt/sources.list.stretch /etc/apt/sources.list
@@ -75,6 +78,13 @@ chmod -R 777 /var/www/html/smi && chmod -R 777 /var/www/html/telechgt && chmod -
 #-------------------------------------------------------------------------------
 cp  /var/www/html/smi/install/prm.inc.php /var/www/html/smi/inc/prm.inc.php
 #-------------------------------------------------------------------------------
+echo "Creation d'un utilisateur MySql autre que Root"
+echo "Saisir le mot de passe root du MySql"
+mysql --user=root -p <<EOF
+CREATE USER 'utilisateur'@'%' IDENTIFIED BY 'motdepasse';
+GRANT ALL PRIVILEGES ON *.* TO 'utilisateur'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+EOF
 echo "Creation base de donnee smi Mot de passe du root MySql"
 mysqladmin -u root -p create smi
 echo "Installation de la base de donnee Mot de passe du root MySql"
