@@ -78,6 +78,7 @@ cp  /var/www/html/smi/install/prm.inc.php /var/www/html/smi/inc/prm.inc.php
 echo "Creation base de donnee smi "
 mysqladmin -u root -p create smi
 echo "Installation de la base de donnee "
+echo "Mot de passe root du MySql"
 mysql -u root -p smi < /var/www/html/smi/install/sql/smi_1.0.4.sql;
 mysql -u root -p smi < /var/www/html/smi/install/sql/smi_1.0.4_to_1.0.5.sql;
 mysql -u root -p smi < /var/www/html/smi/install/sql/smi_1.0.5_to_1.0.6.sql;
